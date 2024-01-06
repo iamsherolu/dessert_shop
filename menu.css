@@ -178,7 +178,7 @@ button:hover{
     background: rgba(227, 236, 225, 0.9);
     color: darkgreen;
 }
-.dessert_content{
+.dessert{
     padding-bottom: 20px;
     background: snow;
     padding: 15px;
@@ -186,7 +186,7 @@ button:hover{
     flex: 1;
     margin: 10px;
 }
-.dessert_content img{
+.dessert img{
     width: 100%;
 }
 .dessert_title{
@@ -237,10 +237,6 @@ footer{
     text-align: center;
 }
 
-.container{
-    padding-top: 110px;
-}
-
 /* dessert_menu */
 .dessert_menu_layout{
     width: 100%;
@@ -274,10 +270,27 @@ footer{
     color: snow;
     border-radius: 15px 15px 0 0 ;
 }
-.dessert_layout{
-    margin-top: 10px;
+#section_newest{
+    padding-top: 100px;
+}
+/* #section_popular{
+    padding-top: 100px;
+}
+#section_tart{
+    padding-top: 100px;
+}
+#section_cake{
+    padding-top: 100px;
+}
+#section_drink{
+    padding-top: 100px;
+}
+#section_other{
+    padding-top: 100px;
+} */
+
+.dessert_content{
     padding-left: 200px;
-    padding-bottom: 100px;
 }
 .container{
     display: grid;
@@ -288,4 +301,7 @@ footer{
     margin: 0px auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+.dessert_layout{
+    padding: 10px;
 }

@@ -30,7 +30,6 @@
             background-color: white;
             max-width: 500px;
             width: 100%;
-            padding:15px 10px 10px;
             border-radius: 0px;
         }
         .dessert_menu_btn{
@@ -42,14 +41,18 @@
         }
         .dessert_menu_title{
             display: none;
-        }
-        .dessert_layout{
-            padding-left: 0px;
+            padding-top: 100px;
         }
         .dessert_item{
             grid-template-columns: auto;
             grid-row: 3;
             grid-column: 1;
+        }
+        .dessert_content{
+            padding: 50px 0px;
+        }
+        .menu_title{
+            padding-top: 100px;
         }
         }
     </style>
@@ -108,46 +111,81 @@
 
     <div class="container">
         <!-- 甜點menu -->
-        <div class="dessert_menu_layout">
+        <div class="dessert_menu_layout" id="dessert_menu_layout">
             <div class="dessert_menu_title">MENU</div>
-            <div class="dessert_menu_btn" onclick="location.href='#newest'">新上市</div>
-            <div class="dessert_menu_btn" onclick="location.href='#popular'">人氣商品</div>
-            <div class="dessert_menu_btn" onclick="location.href='#cake'">蛋糕</div>
-            <div class="dessert_menu_btn" onclick="location.href='#tart'">塔派類</div>
-            <div class="dessert_menu_btn" onclick="location.href='#drink'">飲料</div>
-            <div class="dessert_menu_btn" onclick="location.href='#other'">其他</div>
+            <div class="dessert_menu_btn" onclick="location.href='#newest';scrollToSection('section_newest')">新上市</div>
+            <div class="dessert_menu_btn" onclick="location.href='#popular';scrollToSection('section_popular')">人氣商品</div>
+            <div class="dessert_menu_btn" onclick="location.href='#cake';scrollToSection('section_cake')">蛋糕</div>
+            <div class="dessert_menu_btn" onclick="location.href='#tart';scrollToSection('section_tart')">塔派類</div>
+            <div class="dessert_menu_btn" onclick="location.href='#drink';scrollToSection('section_drink')">飲料</div>
+            <div class="dessert_menu_btn" onclick="location.href='#other';scrollToSection('section_other')">其他</div>
         </div>
 
         <!-- 甜點們 -->
         <div class="dessert_layout">
-
-            <!-- 新上市 -->
-            <div class="menu_title"id="newest">新上市</div>
-            <div class="dessert_item">
-                <div class="dessert_content" data-product-id="1" data-price="50">
-                    <img src="https://images.pexels.com/photos/9863598/pexels-photo-9863598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar">
-                    <p class="dessert_title">港式月餅</p>
-                    <p class="dessert_description">
-                        香滑蓮蓉，酥皮融合，港式月餅，一口幸福滋味。
-                    </p>
-                    <p class="price">$50/個</p>
-                    <button class="button add_btn" onclick="change_btn_color('shopping_cart_btn')" onclick="addToCart(1)">加入購物籃</button>
-                </div>
-                <div class="dessert_content" data-product-id="2" data-price="48">
-                    <img src="https://images.pexels.com/photos/9593945/pexels-photo-9593945.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"" alt="Avatar">
-                    <p class="dessert_title">鳳凰酥</p>
-                    <p class="dessert_description">
-                        金黃鳳凰，黃金內餡，咬一口，滿口香甜，絕對上癮！
-                    </p>
-                    <p class="price">$48/個</p>
-                    <button class="button add_btn" onclick="change_btn_color('shopping_cart_btn')" onclick="addToCart(2)">加入購物籃</button>
+            <div class="dessert_content">
+                <div class="menu_title"id="section_newest">新上市</div>
+                <div class="dessert_item">
+                    <div class="dessert" data-product-id="1" data-price="50">
+                        <img src="https://images.pexels.com/photos/9863598/pexels-photo-9863598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar">
+                        <p class="dessert_title">港式月餅</p>
+                        <p class="dessert_description">
+                            香滑蓮蓉，酥皮融合，港式月餅，一口幸福滋味。
+                        </p>
+                        <p class="price">$50/個</p>
+                        <button class="button add_btn" onclick="change_btn_color('shopping_cart_btn')" onclick="addToCart(1)">加入購物籃</button>
+                    </div>
+                    <div class="dessert" data-product-id="2" data-price="48">
+                        <img src="https://images.pexels.com/photos/9593945/pexels-photo-9593945.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"" alt="Avatar">
+                        <p class="dessert_title">鳳凰酥</p>
+                        <p class="dessert_description">
+                            金黃鳳凰，黃金內餡，咬一口，滿口香甜，絕對上癮！
+                        </p>
+                        <p class="price">$48/個</p>
+                        <button class="button add_btn" onclick="change_btn_color('shopping_cart_btn')" onclick="addToCart(2)">加入購物籃</button>
+                    </div>
                 </div>
             </div>
 
             <!-- 人氣商品 -->
-            <div class="menu_title" id="popular">人氣商品</div>
-            <div class="dessert_item">
-                <div class="dessert_content" data-product-id="3" data-price="35">
+            <div class="dessert_content">
+                <div class="menu_title" id="section_popular">人氣商品</div>
+                <div class="dessert_item">
+                    <div class="dessert" data-product-id="3" data-price="35">
+                        <img src="https://images.pexels.com/photos/3740196/pexels-photo-3740196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar">
+                        <p class="dessert_title">巧音甜蜜樂章</p>
+                        <p class="dessert_description">
+                            美味的巧克力蛋糕，每一層都滿載著濃郁的巧克力口感。
+                        </p>
+                        <p class="price">$35/個</p>
+                        <button class="button add_btn" onclick="change_btn_color('shopping_cart_btn')" onclick="addToCart(3)">加入購物籃</button>
+                    </div>
+                    <div class="dessert" data-product-id="4" data-price="42">
+                        <img src="https://images.pexels.com/photos/11981166/pexels-photo-11981166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar">
+                        <p class="dessert_title">莓果夢露杯</p>
+                        <p class="dessert_description">
+                            草莓奶油杯，夢幻滋味，仙境口感與色彩盡在一口。
+                        </p>
+                        <p class="price">$42/個</p>
+                        <button class="button warn" >限 電話預訂來店領取/來店選購</button>
+                    </div>
+                    <div class="dessert" data-product-id="5" data-price="420">
+                        <img src="https://images.pexels.com/photos/7525161/pexels-photo-7525161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar">
+                        <p class="dessert_title">莓巧悅</p>
+                        <p class="dessert_description">
+                            結合新鮮莓果和濃郁巧克力，帶來極致甜蜜。
+                        </p>
+                        <p class="price">六吋蛋糕 $420/個</p>
+                        <button class="button add_btn" onclick="change_btn_color('shopping_cart_btn')" onclick="addToCart(5)">加入購物籃</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 蛋糕 -->
+            <div class="dessert_content">
+                <div class="menu_title" id="section_cake">蛋糕</div>
+                <div class="dessert_item">
+                    <div class="dessert" data-product-id="3" data-price="35">
                     <img src="https://images.pexels.com/photos/3740196/pexels-photo-3740196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar">
                     <p class="dessert_title">巧音甜蜜樂章</p>
                     <p class="dessert_description">
@@ -155,32 +193,141 @@
                     </p>
                     <p class="price">$35/個</p>
                     <button class="button add_btn" onclick="change_btn_color('shopping_cart_btn')" onclick="addToCart(3)">加入購物籃</button>
+                    </div>
+
+                    <div class="dessert" data-product-id="4" data-price="42">
+                        <img src="https://images.pexels.com/photos/11981166/pexels-photo-11981166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar">
+                        <p class="dessert_title">莓果夢露杯</p>
+                        <p class="dessert_description">
+                            草莓奶油杯，夢幻滋味，仙境口感與色彩盡在一口。
+                        </p>
+                        <p class="price">$42/個</p>
+                        <button class="button warn" >限 電話預訂來店領取/來店選購</button>
+                    </div>
+                    <div class="dessert" data-product-id="6" data-price="580">
+                        <img src="https://images.pexels.com/photos/1857157/pexels-photo-1857157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar">
+                        <p class="dessert_title">糖露仙女蛋糕</p>
+                        <p class="dessert_description">
+                            粉紅夢幻風味，為您帶來甜美愉悅的口感饗宴。
+                        </p>
+                        <p class="price">八吋蛋糕 $580/個</p>
+                        <button class="button add_btn" onclick="change_btn_color('shopping_cart_btn')" onclick="addToCart(6)">加入購物籃</button>
+                    </div>
+                    <div class="dessert" data-product-id="7" data-price="550">
+                        <img src="https://images.pexels.com/photos/140831/pexels-photo-140831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar">
+                        <p class="dessert_title">水果蛋糕</p>
+                        <p class="dessert_description">
+                            新鮮新鮮櫻桃與巧克力的搭配，帶給你甜而不膩的享受！
+                        </p>
+                        <p class="price">八吋蛋糕 $550/個</p>
+                        <button class="button add_btn" onclick="change_btn_color('shopping_cart_btn')" onclick="addToCart(7)">加入購物籃</button>
+                    </div>
+                    <div class="dessert" data-product-id="8" data-price="420">
+                        <img src="https://images.pexels.com/photos/7525161/pexels-photo-7525161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar">
+                        <p class="dessert_title">莓巧悅</p>
+                        <p class="dessert_description">
+                            結合新鮮莓果和濃郁巧克力，帶來極致甜蜜。
+                        </p>
+                        <p class="price">六吋蛋糕 $420/個</p>
+                        <button class="button add_btn" onclick="change_btn_color('shopping_cart_btn')" onclick="addToCart(8)">加入購物籃</button>
+                    </div>
+                    <div class="dessert" data-product-id="9" data-price="550">
+                        <img src="https://images.pexels.com/photos/2144200/pexels-photo-2144200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"  alt="Avatar">
+                        <p class="dessert_title">經典巧克力蛋糕</p>
+                        <p class="dessert_description">
+                            濃郁巧克力風味，絲滑口感，每一口都是甜蜜的享受，散發著經典的誘人魅力。
+                        </p>
+                        <p class="price">八吋蛋糕 $500/個</p>
+                        <button class="button add_btn" onclick="change_btn_color('shopping_cart_btn')" onclick="addToCart(9)">加入購物籃</button>
+                    </div>
+                    <div class="dessert" data-product-id="10" data-price="450">
+                        <img src="https://images.pexels.com/photos/1543800/pexels-photo-1543800.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar">
+                        <p class="dessert_title">翠綠抹茶邦德</p>
+                        <p class="dessert_description">
+                            品味和平衡交織，翠綠抹茶邦德融合濃郁抹茶風味，帶來甜蜜的優雅享受。
+                        </p>
+                        <p class="price">八吋蛋糕 $450/個</p>
+                        <button class="button add_btn" onclick="change_btn_color('shopping_cart_btn')" onclick="addToCart(10)">加入購物籃</button>
+                    </div>
                 </div>
-                <div class="dessert_content" data-product-id="4" data-price="42">
-                    <img src="https://images.pexels.com/photos/11981166/pexels-photo-11981166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar">
-                    <p class="dessert_title">莓果夢露杯</p>
-                    <p class="dessert_description">
-                        草莓奶油杯，夢幻滋味，仙境口感與色彩盡在一口。
-                    </p>
-                    <p class="price">$42/個</p>
-                    <button class="button warn" >限 電話預訂來店領取/來店選購</button>
-                </div>
-                <div class="dessert_content" data-product-id="5" data-price="420">
-                    <img src="https://images.pexels.com/photos/7525161/pexels-photo-7525161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar">
-                    <p class="dessert_title">莓巧悅</p>
-                    <p class="dessert_description">
-                        結合新鮮莓果和濃郁巧克力，帶來極致甜蜜。
-                    </p>
-                    <p class="price">六吋蛋糕 $420/個</p>
-                    <button class="button add_btn" onclick="change_btn_color('shopping_cart_btn')" onclick="addToCart(5)">加入購物籃</button>
+            </div> 
+
+            <!-- 塔派類 -->
+            <div class="dessert_content">
+                <div class="menu_title" id="section_tart">塔派類</div>
+                <div class="dessert_item">
+                    <div class="dessert" data-product-id="11" data-price="120">
+                        <img src="https://images.pexels.com/photos/5419040/pexels-photo-5419040.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar">
+                        <p class="dessert_title">櫻桃百利甜塔派</p>
+                        <p class="dessert_description">
+                            擁有多層酥皮、濃郁百利甜餡和新鮮櫻桃的經典法式塔派。
+                        </p>
+                        <p class="price">$120/個</p>
+                        <button class="button add_btn" onclick="change_btn_color('shopping_cart_btn')" onclick="addToCart(11)">加入購物籃</button>
+                    </div>
+                    <div class="dessert" data-product-id="12" data-price="42">
+                        <img src="https://images.pexels.com/photos/9403582/pexels-photo-9403582.jpeg" alt="Avatar">
+                        <p class="dessert_title">草莓塔</p>
+                        <p class="dessert_description">
+                            奶香草莓塔，濃情味美，香脆塔皮，一試難忘的甜蜜誘人。
+                        </p>
+                        <p class="price">$42/個</p>
+                        <button class="button add_btn" onclick="change_btn_color('shopping_cart_btn')" onclick="addToCart(12)">加入購物籃</button>
+                    </div>
                 </div>
             </div>
 
-            <!-- 蛋糕 -->
-            <div class="menu_title" id="cake">蛋糕</div>
+            <!-- 飲料 -->
+            <div class="dessert_content">
+                <div class="menu_title" id="section_drink">飲料</div>
+                <div class="dessert_item">
+                    <div class="dessert" data-product-id="13" data-price="75">
+                        <img src="https://images.pexels.com/photos/4552171/pexels-photo-4552171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar">
+                        <p class="dessert_title">抹茶拿鐵</p>
+                        <p class="dessert_description">
+                            綠茶抹茶融合成的濃郁拿鐵，帶來茶香和咖啡的完美平衡。
+                        </p>
+                        <p class="price">$75/杯</p>
+                        <button class="button warn" >限 電話預訂來店領取/來店選購</button>
+                    </div>
+                </div>
+            </div>
+
+             <!-- 其他 -->
+             <div class="dessert_content">
+                <div class="menu_title" id="section_other">其他</div>
+                <div class="dessert_item">
+                    <div class="dessert" data-product-id="14" data-price="75">
+                        <img src="https://images.pexels.com/photos/4841828/pexels-photo-4841828.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar">
+                        <p class="dessert_title">水果優格杯</p>
+                        <p class="dessert_description">
+                            新鮮水果、優格、蜂蜜，健康選擇，美味兼具營養。
+                        </p>
+                        <p class="price">$75/杯</p>
+                        <button class="button warn" >限 電話預訂來店領取/來店選購</button>
+                    </div>
+                    <div class="dessert" data-product-id="15" data-price="42">
+                        <img src="https://images.pexels.com/photos/67024/pexels-photo-67024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar">
+                        <p class="dessert_title">夢幻雲朵鬆餅</p>
+                        <p class="dessert_description">
+                            蓬鬆鬆餅，奶油果醬交融，柔滑香甜，每一口都是絕妙的雲朵般美味享受，賦予味蕾無窮陶醉。
+                        </p>
+                        <p class="price">$42/個</p>
+                        <button class="button warn" >限 電話預訂來店領取/來店選購</button>
+                    </div>
+                    <div class="dessert" data-product-id="16" data-price="42">
+                        <img src="https://images.pexels.com/photos/586830/pexels-photo-586830.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Avatar">
+                        <p class="dessert_title">經典馬卡龍</p>
+                        <p class="dessert_description">
+                            令人心動的多彩馬卡龍，每一口都是繽紛嘉年華的饗宴。
+                        </p>
+                        <p class="price">$42/個</p>
+                        <button class="button warn" >限 電話預訂來店領取/來店選購</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
 
     <!--  footer -->
     <section id="footer">
