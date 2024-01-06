@@ -173,6 +173,7 @@ body{
 button{
     background: linear-gradient(135deg,#ACD6FF,#FFF4C1,#E6CAFF);
     border: none;
+    color: black;
 }
 button:hover{
     background: rgba(227, 236, 225, 0.9);
