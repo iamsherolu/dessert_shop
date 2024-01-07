@@ -205,7 +205,7 @@ body{
 
 /* 最新消息 */
 .news_img img{
-    width: 100%;
+    width: 90%;
     border-radius: 15px;
     position: relative;
 }

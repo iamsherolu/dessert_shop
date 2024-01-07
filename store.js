@@ -5,3 +5,8 @@ function show_menu_items(){
 function off_menu_overlay(){
     document.getElementById("show_menu_overlay").style.display="none";
 }
+
+//搜尋功能
+function searchTable() {
+    
+  }
