@@ -2,9 +2,13 @@ body{
     width: 100%;
     background: linear-gradient(135deg,#D2E9FF,	#FFF8D7,#F1E1FF);
     height: 100%;
+    padding: 0;
+    margin: 0;
 }
 *{
     font-family: 'Kosugi Maru', sans-serif;
+    padding: 0;
+    margin: 0;
 }
 @media screen and (max-width: 767px) {
     #news_btn{
@@ -134,18 +138,7 @@ footer{
     padding-bottom: 15px;
     font-family: 'Poiret One','Kosugi Maru';
 }
-#news_items{
-    color: rgb(255, 200, 0);
-}
-#overlay_menu_item_index{
-    color: darkred;
-}
-#overlay_menu_item_index:hover{
-    color: forestgreen;
-}
-#news_items{
-    display: none;
-}
+
 .count{
     background-color: #F1E1FF;
     width: 20px;
@@ -165,4 +158,20 @@ footer{
 .cart:hover{
     color: brown;
     cursor: pointer;
+}
+.more_btn{
+    border-radius: 10px;
+    background-color: snow;
+    padding: 10px;
+    width: 120px;
+    margin: 20px auto;
+    border: 1px dashed brown;
+    cursor: pointer;
+}
+.more_btn:hover{
+    background-color: brown;
+    color: snow;
+}
+.container-fluid{
+    margin: 0;padding: 0
 }
