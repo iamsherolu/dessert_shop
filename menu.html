@@ -16,7 +16,7 @@
         .material-symbols-outlined{
             font-size: 30px;
         }
-        @media (max-width:992px) {
+        @media (max-width:991px) {
         .container{
             grid-template-columns: auto;
             grid-row: 2;
@@ -28,16 +28,19 @@
             top:75px;
             left: 0%;
             background-color: white;
-            max-width: 500px;
+            max-width: 1500px;
             width: 100%;
             border-radius: 0px;
             margin: 0px auto;
-            padding-top:15px ;
+            padding-top:50px ;
+        }
+        .dessert_menu_content{
+            margin: 0px auto;
         }
         .dessert_menu_btn{
             display: inline-block;
             width: 100%;
-            max-width: 150px;
+            max-width: 100px;
             text-align: center;
             margin: 0px;
         }
@@ -46,9 +49,7 @@
             padding-top: 100px;
         }
         .dessert_item{
-            grid-template-columns: auto;
-            grid-row: 3;
-            grid-column: 1;
+            grid-template-columns: repeat(2, 1fr); 
         }
         .dessert_content{
             padding: 50px 0px;
@@ -58,6 +59,15 @@
         }
         #section_newest{
         padding-top: 150px;
+        }
+        .dessert_menu_content{
+            padding: 0px 0px 10px;
+        }
+        }      
+        @media (min-width:992px)and(max-width:1199px) {
+        .dessert_item{
+            grid-template-columns: repeat(2, 1fr); 
+            max-width: 400px;
         }
         }
     </style>
@@ -117,13 +127,15 @@
     <div class="container">
         <!-- 甜點menu -->
         <div class="dessert_menu_layout" id="dessert_menu_layout">
-            <div class="dessert_menu_title">MENU</div>
-            <div class="dessert_menu_btn" onclick="location.href='#newest';scrollToSection('section_newest')">新上市</div>
-            <div class="dessert_menu_btn" onclick="location.href='#popular';scrollToSection('section_popular')">人氣商品</div>
-            <div class="dessert_menu_btn" onclick="location.href='#cake';scrollToSection('section_cake')">蛋糕</div>
-            <div class="dessert_menu_btn" onclick="location.href='#tart';scrollToSection('section_tart')">塔派類</div>
-            <div class="dessert_menu_btn" onclick="location.href='#drink';scrollToSection('section_drink')">飲料</div>
-            <div class="dessert_menu_btn" onclick="location.href='#other';scrollToSection('section_other')">其他</div>
+            <div class="dessert_menu_content">
+                <div class="dessert_menu_title">MENU</div>
+                <div class="dessert_menu_btn" onclick="location.href='#newest';scrollToSection('section_newest')">新上市</div>
+                <div class="dessert_menu_btn" onclick="location.href='#popular';scrollToSection('section_popular')">人氣商品</div>
+                <div class="dessert_menu_btn" onclick="location.href='#cake';scrollToSection('section_cake')">蛋糕</div>
+                <div class="dessert_menu_btn" onclick="location.href='#tart';scrollToSection('section_tart')">塔派類</div>
+                <div class="dessert_menu_btn" onclick="location.href='#drink';scrollToSection('section_drink')">飲料</div>
+                <div class="dessert_menu_btn" onclick="location.href='#other';scrollToSection('section_other')">其他</div>
+            </div>
         </div>
 
         <!-- 甜點們 -->
