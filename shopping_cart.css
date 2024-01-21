@@ -73,7 +73,7 @@ body{
     padding-right: 20px;
 }
 #logo_eng_name{
-    font-family: 'Yomogi', cursive; 
+    font-family: 'Yomogi', 'cursive'; 
     font-weight: 600;
     font-size: 18px;
 }
@@ -83,7 +83,7 @@ body{
     padding-right: 20px;
 }
 .item-eng{
-    font-family: 'Yomogi', cursive; 
+    font-family: 'Yomogi', 'cursive'; 
 }
 .top-nav{
     background:snow;
@@ -102,7 +102,7 @@ body{
     font-size: 50px;
     color: brown;
     text-align: center;
-    font-family: 'Poiret One', cursive;
+    font-family: 'Yomogi', 'cursive'; 
 }
 footer{
     background-color: snow;
@@ -152,76 +152,15 @@ footer{
     color: brown;
     cursor: pointer;
 }
-.table{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    width: 100%;
-    margin: 10px auto 10px;
-    max-width: 850px;
-    vertical-align: middle;
-    grid-gap: 10px;
-    background-color: snow;
-    padding: 10px;
-    text-align: center;
-}
-.table img{
-    width: 100%;
-}
 #content{
-    padding-top: 100px;
+    background-color: snow;
+    width: 90%;
+    max-width: 1000px;
+    margin: 100px auto;
+    padding: 20px;
 }
-.dessert_name{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.price{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.quantity{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.total_price{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.delete_btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.table button{
-    border: none;
-    background-color: transparent;
-}
-.table button:hover{
-    color: red;
-}
-.minus{
-    font-size: 13px;
-    font-weight: 600;
-    background-color: gainsboro;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.plus{
-    font-size: 13px;
-    font-weight: 600;
-    background-color: gainsboro;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.num{
-    padding: 0px 10px;
-    font-weight: 700;
-    
+.list_item{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
 }
